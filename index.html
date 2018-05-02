@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Button Test Page</title>
+  <script src="dist/elements.js"></script>
+</head>
+
+<body>
+  <app-button label="First Value"></app-button>
+
+  <script>
+    const button = document.querySelector('app-button');
+    button.addEventListener('action', (event) => {
+      console.log(`"action" emitted: ${event.detail}`);
+    })
+    setTimeout(() => button.label = 'Second Value', 3000);
+
+  </script>
+</body>
+
+</html>
